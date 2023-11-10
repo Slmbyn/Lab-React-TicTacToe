@@ -21,7 +21,7 @@ app.use(express.json());
 
 app.use(require('./config/checkToken'));
 
- const port = process.env.PORT || 3001;
+ const port = process.env.PORT || 3000;
 
 
 // PUT API ROUTES HERE!, BEFORE THE 'CATCH ALL' ROUTE!!
