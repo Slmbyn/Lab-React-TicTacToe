@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import Board from '../../components/Board/Board';
-// import Messages from '../../components/Messages';
+import Messages from '../../components/Messages';
 // import { Routes, Route } from 'react-router-dom';
 // import { getUser } from '../../utilities/users-service';
 // import './App.css';
@@ -9,6 +9,16 @@ import Board from '../../components/Board/Board';
 export default function App() {
 
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [turn, setTurn] = useState(1);
+  const [winner, setWinner] = useState(null); winner={winner};
+  const [gameOver, setGameOver] = useState(false);
+
+  const handlePlayAgain = () => {
+    setSquares(Array(9).fill(null));
+    setTurn(turn);
+    setWinner(winner);
+    setGameOver(gameOver);
+  };
 
   const handleClick = (i) => {
     // Implement your onClick logic here
@@ -20,8 +30,13 @@ export default function App() {
   return (
     <main className="App">
       <h1>Tic-Tac-Toe</h1>
-      {/* <Messages /> */}
-      <Board squares={squares} onClick={handleClick} />
+      <Messages 
+        turn={turn} 
+        winner={winner} 
+        gameOver={gameOver} 
+        onClickPlayAgain={handlePlayAgain}
+      />
+      <Board squares={squares} turn={turn} onClick={handleClick} />
     </main>
   );
 }
