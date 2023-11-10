@@ -1,0 +1,14 @@
+/* square.css */
+
+.square {
+  height: 20vh;
+  width: 30vw;
+  color: var(--white);
+  background-color: var(--dark-purple);
+  font-size: 20vmin;
+  font-weight: bold;
+  text-align: center;
+  /* border: .1vmin solid var(--light-grey); */
+  margin: 2px;
+  cursor: pointer;
+}

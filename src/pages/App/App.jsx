@@ -30,7 +30,7 @@ export default function App() {
   
   return (
     <main className="App">
-      <h1>Tic-Tac-Toe</h1>
+      <h1 id="game-header">Tic-Tac-Toe</h1>
       <Messages 
         turn={turn} 
         winner={winner} 

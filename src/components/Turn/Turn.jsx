@@ -4,7 +4,7 @@ export default function Turn() {
         //move logic here
       
         // Toggle the player for the next turn
-        setTurn(Turn === 'X' ? 'O' : 'X');
+        // setTurn(Turn === 'X' ? 'O' : 'X');
       };
 
 
