@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: var(--text-dark);
+  background: var(--dark-purple);
 }
 
 .App-logo {
