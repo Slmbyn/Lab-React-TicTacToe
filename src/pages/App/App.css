@@ -6,6 +6,9 @@
   height: 100vh;
   width: 100vw;
   background: black;
+  background-image: url('../../../public/images/background.png');
+  background-size: 170px;
+  background-position: center;
   color: var(--text-light);
 }
 
