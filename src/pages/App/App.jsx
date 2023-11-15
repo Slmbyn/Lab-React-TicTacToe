@@ -10,7 +10,15 @@ export default function App() {
 
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(1);
-  const [winner, setWinner] = useState(null); winner={winner}
+  const [winner, setWinner] = useState(null); winner={winner};
+  const [gameOver, setGameOver] = useState(false);
+
+  const handlePlayAgain = () => {
+    setSquares(Array(9).fill(null));
+    setTurn(turn);
+    setWinner(winner);
+    setGameOver(gameOver);
+  };
 
   const handleClick = (i) => {
     // Implement your onClick logic here
@@ -22,7 +30,12 @@ export default function App() {
   return (
     <main className="App">
       <h1>Tic-Tac-Toe</h1>
-      <Messages turn={turn} winner={winner}/>
+      <Messages 
+        turn={turn} 
+        winner={winner} 
+        gameOver={gameOver} 
+        onClickPlayAgain={handlePlayAgain}
+      />
       <Board squares={squares} turn={turn} onClick={handleClick} />
     </main>
   );
