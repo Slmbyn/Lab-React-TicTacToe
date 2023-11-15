@@ -22,8 +22,8 @@ export default function Winner({ Square }) {
         // Sum the value of the squares
         const comboSum = Square[a] + Square[b] + Square[c];
         // Check for X or O winner
-        if (comboSum === 3) setWinner('X');
-        if (comboSum === -3) setWinner('O');
+        if (comboSum === 3) setWinner('1');
+        if (comboSum === -3) setWinner('-1');
       }
       // if none of the above are true, check for a tie
       if (!Square.includes(0) && winner === null) setWinner('Tie');
