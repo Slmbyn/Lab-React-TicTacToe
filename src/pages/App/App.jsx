@@ -8,7 +8,7 @@ import Messages from '../../components/Messages/Messages';
 
 export default function App() {
 
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState(Array(9).fill(0));
   const [turn, setTurn] = useState(1);
   const [winner, setWinner] = useState(null); winner={winner};
   const [gameOver, setGameOver] = useState(false);
