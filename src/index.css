@@ -1,16 +1,17 @@
 :root {
+  --mauve: #B189C7;
+  --light-grey: #8E8494;
+  --light-purple: #CD7AFA;
+  --medium-purple: #3F0061;
+  --dark-purple: #331F3D;
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
 }
 
 *, *:before, *:after {
-  box-sizing: border-box;
+  border: 1px solid grey;
+  /* box-sizing: border-box; */
 }
 
 body {
@@ -77,39 +78,9 @@ code {
   font-size: 2vmin;
 }
 
-.form-container {
-  padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
-}
-
 p.error-message {
   color: var(--orange);
   text-align: center;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1.25vmin;
-  color: var(--text-light);
-}
-
-label {
-  font-size: 2vmin;
-  display: flex;
-  align-items: center;
-}
-
-input {
-  padding: 1vmin;
-  font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
-  border-radius: .5vmin;
-  color: var(--text-dark);
-  background-image: none !important; /* prevent lastpass */
-  outline: none;
 }
 
 input:focus {
