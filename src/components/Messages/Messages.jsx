@@ -1,9 +1,10 @@
 import './Messages.css'
+import Winner from '../Winner/Winner';
 
-export default function Messages({ gameOver, turn, winner, onClickPlayAgain }) {
+export default function Messages({ gameOver, turn, Winner, onClickPlayAgain }) {
   const renderMessage = () => {
-    if (winner) {
-      return `${winner} is the winner!`;
+    if (Winner) {
+      return `${Winner} is the winner!`;
     } else if (gameOver) {
       return 'Tie game!';
     } else {
