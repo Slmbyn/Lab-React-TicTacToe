@@ -1,3 +1,4 @@
+import Winner from '../Winner/Winner';
 
 export default function Messages({ Winner, Turn }) {
   return (
