@@ -1,0 +1,16 @@
+/* board.css */
+
+.board-container {
+  /* background: var(--dark-purple) */
+  height: 60vmin;
+  width: 90vmin;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  margin-top: 2px ;
+  margin-bottom: 2px;
+  margin-left: -2vw;
+}

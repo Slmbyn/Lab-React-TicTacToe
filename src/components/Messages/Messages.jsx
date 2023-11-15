@@ -1,3 +1,5 @@
+import './Messages.css'
+
 export default function Messages({ gameOver, turn, winner, onClickPlayAgain }) {
   const renderMessage = () => {
     if (winner) {
