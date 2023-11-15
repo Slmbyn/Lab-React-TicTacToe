@@ -2,12 +2,13 @@ import { useState } from 'react';
 import React from 'react';
 import Board from '../../components/Board/Board';
 import Messages from '../../components/Messages/Messages';
+import Turn from '../../components/Turn/Turn';
+
 // import { Routes, Route } from 'react-router-dom';
 // import { getUser } from '../../utilities/users-service';
 // import './App.css';
 
 export default function App() {
-
   const [squares, setSquares] = useState(Array(9).fill(0));
   const [turn, setTurn] = useState(1);
   const [winner, setWinner] = useState(null); winner={winner};
