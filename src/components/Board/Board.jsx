@@ -1,20 +1,30 @@
-import { Link } from 'react-router-dom'
-import * as userService from '../../utilities/users-service'
+import React from 'react';
+import Square from '../Square/Square';
 
-export default function NavBar ({ user, setUser }) {
-    function handleLogOut() {
-        userService.logOut();
-        setUser(null);
-    }
-    return (
-        <nav> 
-            <Link to='/orders'>Order History</Link>
-            &nbsp; | &nbsp;
-            <Link to='/orders/new'>New Order</Link>
-            &nbsp; | &nbsp;
-            <span>Welcome, {user.name} </span>
-            &nbsp; | &nbsp;
-            <Link to='' onClick={ handleLogOut }>Log Out</Link>
-        </nav>
-    )
-}
+const Board = ({ squares, onClick }) => {
+  const renderSquare = (i) => {
+    return <Square value={squares[i]} onClick={() => onClick(i)}/>;
+  };
+
+  return (
+    <div>
+      <div className="board-row">
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
+      </div>
+      <div className="board-row">
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+      </div>
+      <div className="board-row">
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
+  );
+};
+
+export default Board;
